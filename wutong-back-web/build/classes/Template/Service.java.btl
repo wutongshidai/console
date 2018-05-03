@@ -1,0 +1,9 @@
+package ${service.packageName};
+
+/**
+ * ${context.bizChName}Service
+ *
+ */
+public interface I${context.bizEnBigName}Service {
+
+}

@@ -1,0 +1,47 @@
+@layout("/common/_container.html"){
+<div class="row">
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>商品管理</h5>
+            </div>
+            <div class="ibox-content">
+                <div class="row row-lg">
+                    <div class="col-sm-12">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <#NameCon id="userName" name="投标企业名" />
+                                </div>
+                                <div class="col-sm-3">
+                                    <#NameCon id="tenderComName" name="发标企业名" />
+                                </div>
+                                <div class="col-sm-3">
+                                    <#NameCon id="tenderProjectName" name="项目名" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <#NameCon id="bidOrderId" name="订单号" />
+                                </div>
+                                <div class="col-sm-3">
+                                    <#SelectCon id="refundStatus" name="退款状态" >
+                                        <option value="-1">全部</option>
+                                        <option value="0">未退款</option>
+                                        <option value="1">已退款</option>
+                                    </#SelectCon>
+                                </div>
+                                <div class="col-sm-3">
+                                    <#button name="搜索" icon="fa-search" clickFun="OrderRefund.search()"/>
+                                </div>
+                            </div>
+                        </div>
+                        <#table id="OrderRefundTable"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/order/refund/orderRefund.js"></script>
+@}

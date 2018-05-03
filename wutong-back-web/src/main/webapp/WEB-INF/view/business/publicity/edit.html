@@ -1,0 +1,75 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal" id="publicityForm">
+
+            <input type="hidden" id="attachment" name="attachment" value="${bidPublicity.attachment}">
+            <input type="hidden" id="id" name="id" value="${bidPublicity.id}">
+            <input type="hidden" id="industryTemp" name="industryTemp" value="${bidPublicity.industry}">
+            <input type="hidden" id="publicityDate" name="publicityDate" value="${bidPublicity.publicityDate}">
+            <input type="hidden" id="publicityStatus" name="publicityStatus" value="${bidPublicity.publicityStatus}">
+            <input type="hidden" id="cdate" name="cdate" value="${bidPublicity.cdate}">
+
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+
+                    <#input id="projectCode" name="项目编号" underline="true" value="${bidPublicity.projectCode}"/>
+                    <#input id="projectName" name="项目名称" underline="true" value="${bidPublicity.projectName}"/>
+                </div>
+                <div class="col-sm-6 b-r">
+
+                    <#select id="industry" name="所属行业" underline="true">
+                        <option value="1">单一采购</option>
+                        <option value="2">采购及安装</option>
+                        <option value="3">纯劳务</option>
+                        <option value="4">专业分包</option>
+                    </#select>
+                    <#input id="owner" name="招标单位" underline="true" value="${bidPublicity.owner}"/>
+                </div>
+            </div>
+            <div class="row">
+
+                    <div class="col-sm-6 b-r">
+                        <#input id="companyName" name="招标代理单位" underline="true" value="${bidPublicity.companyName}"/>
+                        <#input id="firstCandidate" name="中标候选人1" underline="true" value="${bidPublicity.firstCandidate}"/>
+                        <#input id="secondCandidate" name="中标候选人2" underline="true" value="${bidPublicity.secondCandidate}"/>
+                        <#input id="thirdCandidate" name="中标候选人3" underline="true" value="${bidPublicity.thirdCandidate}"/>
+
+                    </div>
+
+                    <div class="col-sm-6 b-r">
+                        <#input id="winCompany" name="中标单位" underline="true" value="${bidPublicity.winCompany}"/>
+                        <#input id="amount" name="中标金额" underline="true" value="${bidPublicity.amount}"/>
+                        <#input id="winDate" name="中标时间" underline="true" value="${bidPublicity.winDate}"/>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">通告附件</label>
+                            <div class="col-sm-9">
+                                <form id="uploadForm" enctype="multipart/form-data">
+                                    <input class="form-control" id="attachmentFile" name="attachmentFile" type="file" onchange="PublicityInfoDlg.uploadFile()">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 b-r"><label class="col-sm-1 control-label">&nbsp;</label></div>
+                <div class="col-sm-6 b-r">
+                    <label class="col-sm-1 control-label">&nbsp;</label>
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="PublicityInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="PublicityInfoDlg.close()"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 b-r">
+                    <img src="http://wut-publicity.oss-cn-beijing.aliyuncs.com/${bidPublicity.attachment}" id="preAttachment" width="914px" height="1288px"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/business/publicity/publicity_info.js"></script>
+<link rel="stylesheet" type="text/css" href="${ctxPath}/static/css/bootstrap.min.css" />
+<script src="${ctxPath}/static/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+@}

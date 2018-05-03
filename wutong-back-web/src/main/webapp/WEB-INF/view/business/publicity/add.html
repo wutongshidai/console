@@ -1,0 +1,70 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal" id="publicityForm">
+
+            <input type="hidden" id="attachment" name="attachment" value="">
+
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+
+                    <#input id="projectCode" name="项目编号" underline="true"/>
+                    <#input id="projectName" name="项目名称" underline="true"/>
+                </div>
+                <div class="col-sm-6 b-r">
+
+                    <#select id="industry" name="所属行业" underline="true">
+                        <option value="1" selected>单一采购</option>
+                        <option value="2">采购及安装</option>
+                        <option value="3">纯劳务</option>
+                        <option value="4">专业分包</option>
+                    </#select>
+                    <#input id="owner" name="招标单位" underline="true"/>
+                </div>
+            </div>
+            <div class="row">
+
+                    <div class="col-sm-6 b-r">
+                        <#input id="companyName" name="招标代理单位" underline="true"/>
+                        <#input id="firstCandidate" name="中标候选人1" underline="true"/>
+                        <#input id="secondCandidate" name="中标候选人2" underline="true"/>
+                        <#input id="thirdCandidate" name="中标候选人3" underline="true"/>
+                    </div>
+
+                    <div class="col-sm-6 b-r">
+                        <#input id="winCompany" name="中标单位" underline="true"/>
+                        <#input id="amount" name="中标金额" underline="true"/>
+                        <#input id="winDate" name="中标时间" underline="true"/>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">通告附件</label>
+                                <div class="col-sm-9">
+                                    <form id="uploadForm" enctype="multipart/form-data">
+                                        <input class="form-control" id="attachmentFile" name="attachmentFile" type="file" onchange="PublicityInfoDlg.uploadFile()">
+                                    </form>
+                                </div>
+                            </div>
+                    </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-6 b-r"><label class="col-sm-1 control-label">&nbsp;</label></div>
+                <div class="col-sm-6 b-r">
+                <label class="col-sm-1 control-label">&nbsp;</label>
+                <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="PublicityInfoDlg.addSubmit()"/>
+                <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="PublicityInfoDlg.close()"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 b-r">
+                    <img src="" id="preAttachment" style="display: none" width="914px" height="1288px"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/business/publicity/publicity_info.js"></script>
+<link rel="stylesheet" type="text/css" href="${ctxPath}/static/css/bootstrap.min.css" />
+<script src="${ctxPath}/static/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+@}

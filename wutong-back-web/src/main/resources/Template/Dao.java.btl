@@ -1,0 +1,10 @@
+package ${dao.packageName};
+
+/**
+ * ${context.bizChName}Dao
+ *
+ */
+public interface ${context.bizEnBigName}Dao {
+
+
+}
