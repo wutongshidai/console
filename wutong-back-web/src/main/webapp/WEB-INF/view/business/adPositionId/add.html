@@ -1,0 +1,36 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal" id="menuInfoForm">
+
+            <input type="hidden" id="img" value="">
+
+            <div class="row">
+                <div class="col-sm-12 b-r">
+                    <#input id="name" name="店铺名称" underline="true" />
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">图片</label>
+                        <div class="col-sm-9">
+                            <form id="uploadForm1" enctype="multipart/form-data">
+                                <input class="form-control" id="attachmentFile" name="ggwFile" type="file" onchange="adPositionInfoDlg.uploadFile()">
+
+                            </form>
+                        </div>
+                    </div>
+                    <#input id="url" name="店铺链接" underline="true" />
+                    <#input id="status" name="状态" underline="true"/>
+                    <#input id="levels" name="位置" underline="true" />
+            </div>
+        </div>
+
+        <div class="row btn-group-m-t">
+            <div class="col-sm-12">
+                <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="adPositionInfoDlg.addSubmit()"/>
+                <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="MenuInfoDlg.close()"/>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    <script src="${ctxPath}/static/modular/business/adPositionId/ad_info.js"></script>
+@}

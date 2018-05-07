@@ -1,0 +1,24 @@
+@layout("/common/_container.html"){
+<div class="row">
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>公告管理</h5>
+            </div>
+            <div class="hidden-xs" id="DeptTableToolbar" role="group">
+                @if(shiro.hasPermission("/business/adPositionId/addAd")){
+                <#button name="广告位新增" icon="fa-plus" clickFun="BusinessAdPositon.openAddad()"/>
+                @}
+                @if(shiro.hasPermission("/business/adPositionId/upad")){
+                <#button name="广告位修改" icon="fa-plus" clickFun="BusinessAdPositon.upad(1)" space="true"/>
+                @}
+            </div>
+            <#table id="adPositionTable"/>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<script src="${ctxPath}/static/modular/business/adPositionId/adPositionId.js"></script>
+@}
