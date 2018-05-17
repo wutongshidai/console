@@ -108,7 +108,7 @@ adPositionInfoDlg.close = function () {
  * 收集数据
  */
 adPositionInfoDlg.collectData = function () {
-    this.set('name').set('img').set('url').set('status').set('levels').set('id')
+    this.set('name').set('img').set('url').set('levels').set('id')
 }
 
 /**
@@ -134,11 +134,11 @@ adPositionInfoDlg.validate = function () {
         Feng.error("请填写店铺链接!")
         return false;
     }
-    var content = $.trim($('#status').val());
-    if (!content || content == '' || content == undefined) {
-        Feng.error("请填写状态!")
-        return false;
-    }
+    // var content = $.trim($('#status').val());
+    // if (!content || content == '' || content == undefined) {
+    //     Feng.error("请填写状态!")
+    //     return false;
+    // }
     var content = $.trim($('#levels').val());
     if (!content || content == '' || content == undefined) {
         Feng.error("请填写位置!")

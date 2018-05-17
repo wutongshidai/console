@@ -9,9 +9,9 @@
                 @if(shiro.hasPermission("/business/adPositionId/addAd")){
                 <#button name="广告位新增" icon="fa-plus" clickFun="BusinessAdPositon.openAddad()"/>
                 @}
-                @if(shiro.hasPermission("/business/adPositionId/upad")){
-                <#button name="广告位修改" icon="fa-plus" clickFun="BusinessAdPositon.upad(1)" space="true"/>
-                @}
+                <!--if(shiro.hasPermission("/business/adPositionId/upad")){-->
+                <!--<#button name="广告位修改" icon="fa-plus" clickFun="BusinessAdPositon.upad(1)" space="true"/>-->
+                <!--}-->
             </div>
             <#table id="adPositionTable"/>
         </div>

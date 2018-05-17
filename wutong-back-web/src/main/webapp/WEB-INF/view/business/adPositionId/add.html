@@ -18,15 +18,14 @@
                         </div>
                     </div>
                     <#input id="url" name="店铺链接" underline="true" />
-                    <#input id="status" name="状态" underline="true"/>
+                    <!--<#input id="status" name="状态" underline="true"/>-->
                     <#input id="levels" name="位置" underline="true" />
             </div>
         </div>
-
         <div class="row btn-group-m-t">
-            <div class="col-sm-12">
+            <div style="margin: 0 auto;width: 180px">
                 <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="adPositionInfoDlg.addSubmit()"/>
-                <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="MenuInfoDlg.close()"/>
+                <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="adPositionInfoDlg.close()"/>
             </div>
         </div>
     </div>

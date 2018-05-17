@@ -26,10 +26,10 @@ BusinessAdPositon.initColumn = function() {
         {title: '名称', field: 'name', align: 'left', valign: 'middle', sortable: true},
         {title: '图片', field: 'img', align: 'center', valign: 'middle', sortable: true},
         {title: '店铺链接', field: 'url', align: 'center', valign: 'middle', sortable: true,},
-        {title: '状态', field: 'status', align: 'center', valign: 'middle', sortable: true, formatter: function(value, row, index) {
-                return value == 1 ? "启用" : "禁用";
-            }},
-        {title: '位置', field: 'level', align: 'center', valign: 'middle', sortable: true,         },
+        // {title: '状态', field: 'status', align: 'center', valign: 'middle', sortable: true, formatter: function(value, row, index) {
+        //         return value == 1 ? "启用" : "禁用";
+        //     }},
+        {title: '位置', field: 'levels', align: 'center', valign: 'middle', sortable: true},
         {title: '发布时间', field: 'time', align: 'center', valign: 'middle', sortable: true}];
 };
 
